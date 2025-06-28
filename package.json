@@ -1,0 +1,19 @@
+{
+  "name": "testing-with-code-coverage",
+  "version": "1.0.0",
+  "description": "This is an exmaple package of how to leverage code coverage for your tests",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:coverage-incorrect": "vitest run --coverage --coverage.provider=v8"
+  },
+  "author": "Shahar Duany",
+  "license": "ISC",
+  "devDependencies": {
+    "@vitest/coverage-istanbul": "^3.2.4",
+    "@vitest/coverage-v8": "^3.2.4",
+    "vitest": "^3.2.4"
+  }
+}
