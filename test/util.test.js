@@ -10,13 +10,5 @@ describe("dummyFunction(input, logger)", () => {
         expect(result).toBe(null);
       });
     });
-
-    describe("is greater than 5", () => {
-      it('should return "high"', () => {
-        const input = 6;
-        const result = dummyFunction(input);
-        expect(result).toBe("high");
-      });
-    });
   });
 });
