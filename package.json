@@ -5,14 +5,15 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "mocha test/**/*.test.js",
-    "cover": "c8 mocha test/**/*.test.js"
+    "test": "mocha",
+    "cover": "c8 --experimental-monocart --reporter=v8 --reporter=console-details mocha"
   },
   "author": "Shahar Duany",
   "license": "ISC",
   "devDependencies": {
     "c8": "^10.1.3",
     "chai": "^4.3.10",
-    "mocha": "^10.2.0"
+    "mocha": "^10.2.0",
+    "monocart-coverage-reports": "^2.12.6"
   }
 }
