@@ -34,4 +34,34 @@ describe("dummyFunction(input, logger)", () => {
       });
     });
   });
+
+  describe("the logged output", () => {
+    describe("when the input", () => {
+      let mockLogger = {};
+      beforeEach(() => (mockLogger = { log: vi.fn() }));
+      afterEach(() => vi.clearAllMocks());
+
+      describe("is a positive number", () => {
+        it("should log the value is positive", () => {
+          const input = 3;
+          dummyFunction(input, mockLogger);
+          expect(mockLogger.log).toHaveBeenCalledWith(
+            "Processing:",
+            "positive"
+          );
+        });
+      });
+
+      describe("is a negative number", () => {
+        it("should log the value is negative", () => {
+          const input = -2;
+          dummyFunction(input, mockLogger);
+          expect(mockLogger.log).toHaveBeenCalledWith(
+            "Processing:",
+            "negative"
+          );
+        });
+      });
+    });
+  });
 });
