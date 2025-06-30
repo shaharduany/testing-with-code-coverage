@@ -1,6 +1,6 @@
 export default {
   name: "My Vitest Coverage Report",
-  reports: ["console-details", "istanbul", "markdown-details"],
+  reports: ["console-details", "v8"],
   lcov: true,
   filter: { "**/src/**": true },
   outputDir: "coverage",

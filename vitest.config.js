@@ -7,9 +7,9 @@ export default defineConfig({
     coverage: {
       enabled: true,
       include: ["src/**/*"],
-      provider: 'istanbul',
-      // provider: "custom",
-      // customProviderModule: "vitest-monocart-coverage",
+      // provider: 'istanbul',
+      provider: "custom",
+      customProviderModule: "vitest-monocart-coverage",
       reportsDirectory: "./coverage",
       thresholds: {
         global: {
