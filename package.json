@@ -5,15 +5,14 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "vitest run",
-    "test:coverage": "vitest run --coverage",
-    "test:coverage-incorrect": "vitest run --coverage --coverage.provider=v8"
+    "test": "vitest"
   },
   "author": "Shahar Duany",
   "license": "ISC",
   "devDependencies": {
     "@vitest/coverage-istanbul": "^3.2.4",
-    "@vitest/coverage-v8": "^3.2.4",
-    "vitest": "^3.2.4"
+    "monocart-coverage-reports": "^2.12.6",
+    "vitest": "^3.2.4",
+    "vitest-monocart-coverage": "^3.0.1"
   }
 }
