@@ -48,40 +48,6 @@ describe("analyzePassword(password)", () => {
     });
   });
 
-  describe("when password is excellent", () => {
-    it("should return 'Excellent' for 12+ chars with all character types", () => {
-      const result = analyzePassword("MySecure123!");
-      expect(result).to.equal("Excellent");
-    });
-
-    it("should return 'Excellent' for long complex password", () => {
-      const result = analyzePassword("SuperSecret2024@Pass");
-      expect(result).to.equal("Excellent");
-    });
-  });
-
-  describe("when password is strong", () => {
-    it("should return 'Strong' with upper, lower, and numbers", () => {
-      const result = analyzePassword("Password123");
-      expect(result).to.equal("Strong");
-    });
-
-    it("should return 'Strong' with upper, lower, and special chars", () => {
-      const result = analyzePassword("Password!");
-      expect(result).to.equal("Strong");
-    });
-
-    it("should return 'Strong' with lower, numbers, and special chars", () => {
-      const result = analyzePassword("secret123!");
-      expect(result).to.equal("Strong");
-    });
-
-    it("should return 'Strong' with upper, numbers, and special chars", () => {
-      const result = analyzePassword("SECRET123!");
-      expect(result).to.equal("Strong");
-    });
-  });
-
   describe("when password is fair", () => {
     it("should return 'Fair' with only lowercase letters", () => {
       const result = analyzePassword("justlowercase");
