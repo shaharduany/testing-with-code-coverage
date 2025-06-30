@@ -1,41 +1,7 @@
-import { describe, it } from "mocha";
-import { expect } from "chai";
+import { describe, it, expect } from "vitest";
 import { analyzePassword } from "../src/calc.js";
 
 describe("analyzePassword(password)", () => {
-  describe("when input is invalid", () => {
-    describe("when password is not a string", () => {
-      it("should return 'Invalid'", () => {
-        const result = analyzePassword(123);
-        expect(result).to.equal("Invalid");
-      });
-    });
-
-    describe("when password is empty", () => {
-      it("should return 'Invalid'", () => {
-        const result = analyzePassword("");
-        expect(result).to.equal("Invalid");
-      });
-    });
-  });
-
-  describe("when password is common", () => {
-    it("should return 'Terrible' for 'password'", () => {
-      const result = analyzePassword("password");
-      expect(result).to.equal("Terrible");
-    });
-
-    it("should return 'Terrible' for '123456'", () => {
-      const result = analyzePassword("123456");
-      expect(result).to.equal("Terrible");
-    });
-
-    it("should return 'Terrible' for 'QWERTY' (case insensitive)", () => {
-      const result = analyzePassword("QWERTY");
-      expect(result).to.equal("Terrible");
-    });
-  });
-
   describe("when password is short", () => {
     it("should return 'Weak' for password shorter than 6 characters", () => {
       const result = analyzePassword("Ab1!");

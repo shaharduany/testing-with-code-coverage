@@ -8,7 +8,7 @@
     "**/*.spec.js",
     "**/__tests__/**"
   ],
-  "reporter": ["text", "json", "html"],
+  "reporter": ["text", "json", "html", "markdown-details"],
   "reportsDir": "./coverage",
   "checkCoverage": true,
   "branches": 80,
